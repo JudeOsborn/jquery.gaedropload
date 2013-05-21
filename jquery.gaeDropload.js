@@ -8,10 +8,15 @@
 * sends a file to the blobstore via a FormData() object.
 *
 * Usage:
-* Apply to an droppable HTML element like this:
+* Apply to a droppable HTML element like this:
 *	$('.draggable-element').gaeDropload();
 *
 * Options:
+*  - generate_url: A GAE URL that returns a blobstore URL.
+*  - extraFormData: Extra data to be sent along with the file data. 
+*		Can be a function.
+*  - The following events can receive a callback: dragstart, dragover, 
+*		dragenter, dragleave, beforeDrop, afterDrop, dropSuccess
 *
 * Copyright (c) 2013 Jude Osborn
 *

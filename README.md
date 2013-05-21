@@ -6,17 +6,17 @@ A jQuery plugin that enables HTML5 drag and drop functionality and file uploads 
 Usage
 -----
 
-Apply to an droppable HTML element like this:
+Apply to a droppable HTML element like this:
 
 	$('.draggable-element').gaeDropload();
 
-The above declaration with no parameters assumes a URL called "generate_upload_url", which is a GAE URL that returns a blobstore URL.
+The above declaration with no parameters assumes a URL called "generate_upload_url", which should be a GAE URL that returns a blobstore URL.
 
 Options
 -------
 
  * generate_url: A GAE URL that returns a blobstore URL.
- * extraFormData: Extra data to be sent along with the multipart file form. Can be a function.
+ * extraFormData: Extra data to be sent along with the file data. Can be a function.
  * The following events can receive a callback: dragstart, dragover, dragenter, dragleave, 
  	beforeDrop, afterDrop, dropSuccess
 
