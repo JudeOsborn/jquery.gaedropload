@@ -27,7 +27,7 @@
 	$.fn.gaeDropload = function(options) {
 		var settings = {
 			generate_url: '/generate_upload_url',
-			extraFormData: null,
+			extraFormData: {},
 			dragstart: empty,
 			dragover: empty,
 			dragenter: empty,
@@ -128,8 +128,8 @@
 							url: url,
 							data: fd,
 							async: true,
-							success: function() {
-								settings.dropSuccess();
+							success: function(data) {
+								settings.dropSuccess(data);
 							}
 						});
 					}
